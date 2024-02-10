@@ -2,6 +2,7 @@
 
 members = [
     "ntpnet",
+    "pyproc",
 ]
 
 [profile.dev]
