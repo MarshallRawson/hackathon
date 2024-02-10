@@ -36,3 +36,4 @@ COPY scripts ./scripts
 
 
 RUN /root/.cargo/bin/cargo build
+RUN apt install -y graphviz
