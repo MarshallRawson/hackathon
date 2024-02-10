@@ -9,6 +9,9 @@ use std::fmt;
 use std::fmt::{Debug, Formatter};
 use std::ops::Deref;
 
+pub use plotmux;
+//pub use utilities;
+
 pub trait NamedAny: Any {
     fn type_name(&self) -> &'static str;
 }

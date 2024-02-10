@@ -3,6 +3,7 @@
 members = [
     "ntpnet",
     "pyproc",
+    "hackathon",
 ]
 
 [profile.dev]

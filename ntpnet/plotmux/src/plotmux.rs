@@ -178,8 +178,8 @@ fn make_client(png_path: Option<&PathBuf>, mode: &ClientMode) -> TcpStream {
                     .as_path()
                     .parent()
                     .unwrap()
-                    .parent()
-                    .unwrap()
+                    //.parent()
+                    //.unwrap()
                     .join(Path::new("plotmuxui")),
             );
             if let Some(png_path) = png_path {

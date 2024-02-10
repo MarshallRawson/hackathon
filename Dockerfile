@@ -5,7 +5,6 @@ RUN apt install -y libpython3-dev sudo curl gcc python3 python3-pip
 
 WORKDIR /root
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-#RUN source "$HOME/.cargo/env"
 
 RUN mkdir hackathon
 WORKDIR /root/hackathon
