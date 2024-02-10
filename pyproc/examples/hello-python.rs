@@ -1,5 +1,3 @@
-use std::io::Write;
-
 use pyproc::PyProc;
 
 fn main() {
