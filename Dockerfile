@@ -22,9 +22,9 @@ RUN python3 download-model.py
 COPY Cargo.lock .
 COPY Cargo.toml .
 COPY rust-toolchain.toml .
-COPY ntpnet ./ntpnet
 RUN /root/.cargo/bin/cargo init pyproc
 RUN /root/.cargo/bin/cargo init hackathon
+COPY ntpnet ./ntpnet
 RUN /root/.cargo/bin/cargo build --package ntpnet
 RUN rm -r ./pyproc
 COPY pyproc ./pyproc
@@ -32,8 +32,11 @@ RUN /root/.cargo/bin/cargo build --package pyproc
 RUN rm -r ./hackathon
 COPY hackathon ./hackathon
 RUN /root/.cargo/bin/cargo build --package hackathon
+
+RUN apt install -y graphviz libv4l-dev libasound-dev
+RUN python3 -m pip install pyalsaaudio pavucontrol
+RUN /root/.cargo/bin/cargo build
 COPY scripts ./scripts
 
+RUN ./scripts/mtcnn
 
-RUN /root/.cargo/bin/cargo build
-RUN apt install -y graphviz

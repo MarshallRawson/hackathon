@@ -1410,8 +1410,19 @@ dependencies = [
 name = "hackathon"
 version = "0.1.0"
 dependencies = [
+ "byteorder",
+ "clap",
+ "fft2d",
+ "image",
+ "itertools",
+ "libpulse-binding",
+ "libpulse-simple-binding",
+ "libpulse-sys",
  "ntpnet",
  "pyproc",
+ "rscam",
+ "rustfft",
+ "tensorflow",
 ]
 
 [[package]]
